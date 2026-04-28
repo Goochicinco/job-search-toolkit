@@ -22,33 +22,37 @@ pip install weasyprint
 
 This toolkit repo contains only the reusable skills and scripts. Your personal data (resume, cover letter, lead tracker, applications) belongs in a separate private repo.
 
-Clone or fork this repo, then create your `Inputs/` files:
+Clone or fork this repo, then open Claude Code in the repo directory and run:
+
+```
+/get-started
+```
+
+This skill walks you through the full setup interactively -- collecting your contact info, preferences, resume, and cover letter, then writing all required `Inputs/` files and configuring the system files. When it finishes, you're ready to run your first job posting.
+
+#### What `/get-started` sets up
 
 ```
 Inputs/
-  Resume.md           # Your master resume (see Resume.template.md)
+  Resume.md           # Your master resume
   Cover Letter.md     # Your master cover letter
-  Preferences.md      # Your job search criteria (see Preferences.template.md)
+  Preferences.md      # Your job search criteria
   Experience Bank.md  # Created automatically by /customize-for-job
 ```
 
-Template files are provided in `Inputs/*.template.md` to get you started.
+It also updates `.claude/skills/generate-pdfs/cover-letter-header.html` and `Scripts/generate-base-docs.sh` with your name and contact info.
 
-### 3. Configure the header
-
-Edit `.claude/skills/generate-pdfs/cover-letter-header.html` with your name and contact info. This header appears on every generated cover letter PDF.
-
-### 4. Configure your name in the base script
-
-Edit `Scripts/generate-base-docs.sh` and set `APPLICANT_NAME` to your full name. This controls the output PDF filenames for base documents.
-
-### 5. Adjust regional VC job boards
+#### One manual step after setup
 
 In `.claude/skills/find-jobs/SKILL.md`, the regional VC job board list defaults to Utah-focused VCs. Replace these with VCs relevant to your metro area for better local leads.
 
 ## Skills
 
 Run these from the Claude Code CLI with `/skill-name`:
+
+### `/get-started`
+
+Interactive onboarding for new users. Collects your contact info, job search preferences, resume, and cover letter through a guided conversation, then writes all required `Inputs/` files and configures the PDF generation system. Run this once when setting up the toolkit.
 
 ### `/find-jobs [keyword-or-pipeline]`
 
