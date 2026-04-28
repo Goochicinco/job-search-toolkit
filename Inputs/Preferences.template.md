@@ -59,6 +59,14 @@ Your criteria for evaluating job opportunities. These preferences inform `/find-
 
 - [Your preferred engineering practices and why]
 
+## Candidate Voice
+
+- **Tone:** [e.g., Direct and confident, warm but professional, conversational]
+- **Style:** [e.g., Lead with data, use concrete examples, avoid vague superlatives]
+- **Avoid:** [e.g., Clichés like "passionate about" or "results-driven"; filler phrases; passive voice]
+- **Sentence structure:** [e.g., Prefer short declarative sentences; avoid run-ons]
+- **Other notes:** [Any other voice or style guidance for generated documents]
+
 ## Document Formatting
 
 - [Any formatting preferences for generated documents]

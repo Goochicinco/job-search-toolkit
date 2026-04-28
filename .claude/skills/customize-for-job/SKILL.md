@@ -172,6 +172,8 @@ Mark any section where data was not found as "No data found" rather than omittin
    - `Inputs/Cover Letter.md`
    - `Inputs/Experience Bank.md` (if it exists; skip without error if not)
 
+   After reading `Inputs/Preferences.md`, extract the **Candidate Voice** section (if present) and keep it as a standing reference for all document generation in Phase 4. It defines the tone, style, vocabulary choices, and things to actively avoid in every generated document.
+
 4. **Read the Company Profile** created in Phase 1 (`Applications/CompanyName/Company Profile - CompanyName.md`) to inform gap analysis and output tailoring.
 
 ### Phase 3: Gap analysis and inquiry
@@ -193,7 +195,7 @@ Create all files in `Applications/CompanyName/`. Name resume and cover letter fi
 #### 1. `[FirstName LastName] - Resume - CompanyName.md`
 - Do NOT fabricate experience or skills the candidate doesn't have
 - Reorder bullets within each role to lead with the most relevant ones for this job
-- Adjust the summary to emphasize the aspects most relevant to this role
+- Adjust the summary to emphasize the aspects most relevant to this role; apply the Candidate Voice from Preferences.md (tone, style, things to avoid)
 - Incorporate relevant information from the Experience Bank that strengthens the fit
 - Keep all formatting consistent with the base resume
 
@@ -216,7 +218,7 @@ Create all files in `Applications/CompanyName/`. Name resume and cover letter fi
 - Adjust emphasis to match job priorities
 - For any genuine remaining gaps, honestly acknowledge them in the cover letter. Frame each gap with transferable skills and a concrete plan to bridge it. Never omit or hide gaps.
 - Reference specific company details from the Company Profile (funding stage, product, mission) to demonstrate genuine research and interest. Weave them into the narrative naturally; do not simply list facts.
-- Keep the voice and tone consistent with the base cover letter
+- Apply the **Candidate Voice** from `Inputs/Preferences.md`: match the specified tone, follow the style guidelines, and avoid anything listed under "Avoid." This takes precedence over the base cover letter's existing style -- if the base letter deviates from Preferences.md voice, correct toward Preferences.md.
 - Do NOT use em dashes. Use other punctuation instead.
 - **ATS keyword reinforcement:** Many ATS platforms parse and score cover letters alongside resumes. Reinforce the top 5-7 required keywords from the keyword inventory using the JD's exact terms. Do not treat the cover letter as a second keyword-stuffing opportunity; it should remain a persuasive narrative.
 
@@ -316,6 +318,7 @@ Accumulated knowledge about your experience, organized by topic.
 - ALWAYS ask about gaps before assuming the candidate lacks experience
 - ALWAYS read the Experience Bank (if it exists) before gap analysis
 - ALWAYS append new information to the Experience Bank after user answers
+- ALWAYS apply the Candidate Voice from `Inputs/Preferences.md` when generating or customizing any document. If the section is absent, infer voice from the base cover letter's existing style.
 - The base documents are the source of truth. Only rearrange and emphasize, don't rewrite the core narrative.
 - Always create new files in the Applications subfolder.
 - Keep company research efficient: aim for no more than ~10 WebSearch calls and ~8 WebFetch calls for the entire research phase.

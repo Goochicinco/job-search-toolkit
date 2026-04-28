@@ -114,14 +114,15 @@ Do not ask one question at a time. Ask the full batch in a single message.
 > 5. What are your work environment must-haves? (things you need to thrive)
 > 6. What are your work environment must-nots? (things that will make you miserable or ineffective)"
 
-### Batch F: Methodology and Formatting (Optional)
+### Batch F: Methodology, Voice, and Formatting (Optional)
 
-> "Two optional topics -- skip either or both if you don't have strong preferences.
+> "Three optional topics -- skip any you don't have strong preferences on.
 >
 > 1. Do you have preferred engineering methodologies or practices? (e.g., strong preference for continuous delivery, or particular views on Agile)
-> 2. Any document formatting preferences for your generated resumes and cover letters? (e.g., prefer bullet-heavy, prefer concise)"
+> 2. How would you describe your writing voice and tone? (e.g., direct and confident, warm but professional, conversational) Are there phrases, words, or patterns you want to avoid in generated documents? (e.g., clichés like 'passionate about' or 'results-driven', passive voice, filler phrases)
+> 3. Any document formatting preferences for your generated resumes and cover letters? (e.g., prefer bullet-heavy, prefer concise)"
 
-If the user skips this batch or passes on both questions, note "No preferences specified" in the relevant sections and proceed.
+If the user skips this batch or passes on individual questions, note "No preferences specified" in the relevant sections and proceed. For the voice question specifically, leave all Candidate Voice fields as their template placeholders if the user skips it.
 
 ### After All Batches: Full Preview
 
