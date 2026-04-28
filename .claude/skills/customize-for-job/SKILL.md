@@ -207,6 +207,8 @@ Create all files in `Applications/CompanyName/`. Name resume and cover letter fi
 
 **ATS structure guardrails:**
 - Maintain standard section headings consistent with the base resume. Do not rename them.
+- Within EXPERIENCE, always use the format: `**Title | Company (description) | Dates**`. Do not rearrange the order.
+- Use consistent date formats: `Month Year - Month Year` (e.g., "August 2022 - January 2026"). No abbreviations or formats like "2022-2026."
 - No tables, columns, text boxes, or images.
 
 #### 2. `[FirstName LastName] - Cover Letter - CompanyName.md`
