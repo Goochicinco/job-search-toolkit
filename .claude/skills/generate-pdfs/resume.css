@@ -1,0 +1,86 @@
+@page {
+  size: letter;
+  margin: 0.5in 0.6in;
+}
+
+body {
+  font-family: Carlito, Calibri, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.35;
+  color: #222;
+}
+
+/* Name */
+h1:first-of-type {
+  font-size: 22pt;
+  font-weight: 300;
+  margin: 0 0 2pt 0;
+  letter-spacing: 0.5pt;
+  color: #4a86c8;
+  border-bottom: none;
+}
+
+/* Contact info lines right after the name */
+h1:first-of-type + p,
+h1:first-of-type + p + p {
+  margin: 0;
+  padding: 0;
+  font-size: 9pt;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Third contact line (github/podcast) — add space before next section */
+h1:first-of-type + p + p + p {
+  margin: 0 0 4pt 0;
+  padding: 0;
+  font-size: 9pt;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Section headings */
+h1 {
+  font-size: 12pt;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  color: #4a86c8;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 10pt;
+  margin-bottom: 4pt;
+}
+
+/* Role titles */
+p strong:first-child {
+  font-size: 10pt;
+}
+
+/* Paragraphs */
+p {
+  margin: 3pt 0;
+}
+
+/* Bullet lists */
+ul {
+  margin: 2pt 0 6pt 0;
+  padding-left: 18pt;
+}
+
+li {
+  margin-bottom: 2pt;
+}
+
+/* Prevent awkward page breaks */
+h1, h2, h3 {
+  page-break-after: avoid;
+}
+
+li {
+  page-break-inside: avoid;
+}
+
+/* Keep role title + description + first bullets together */
+p + ul {
+  page-break-before: avoid;
+}

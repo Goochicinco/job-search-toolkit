@@ -1,0 +1,13 @@
+.DS_Store
+**/*.pdf
+Applications/
+Archived/
+Downloaded JDs/
+Documents/
+Inputs/Resume.md
+Inputs/Cover Letter.md
+Inputs/Experience Bank.md
+Inputs/Preferences.md
+Lead Tracker.md
+Company Pipeline.md
+Podcast Transcripts/

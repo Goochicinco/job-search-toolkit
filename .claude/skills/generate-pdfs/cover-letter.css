@@ -1,0 +1,48 @@
+@page {
+  size: letter;
+  margin: 0.6in 0.65in;
+}
+
+body {
+  font-family: Carlito, Calibri, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: #222;
+}
+
+/* Header name */
+.header h1 {
+  font-size: 22pt;
+  font-weight: 300;
+  color: #4a86c8;
+  margin: 0 0 2pt 0;
+  letter-spacing: 0.5pt;
+}
+
+/* Header contact info */
+.header p {
+  margin: 0;
+  font-size: 9pt;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Space after header before body text */
+.header {
+  margin-bottom: 12pt;
+}
+
+/* Bold lead-ins like "What you get:" */
+strong {
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  margin: 0 0 7pt 0;
+}
+
+/* No headings expected in cover letter, but just in case */
+h1, h2, h3 {
+  page-break-after: avoid;
+}
