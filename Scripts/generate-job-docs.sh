@@ -79,14 +79,21 @@ echo ""
 echo "Page counts:"
 for pdf in "$folder"/*.pdf; do
   [[ -f "$pdf" ]] || continue
-  pages="(null)"
-  for _ in 1 2 3; do
-    pages=$(mdls -name kMDItemNumberOfPages -raw "$pdf")
-    [[ "$pages" != "(null)" ]] && break
-    sleep 1
-  done
+  pages=$(python -c "
+import zlib, re, sys
+with open(sys.argv[1], 'rb') as f:
+    content = f.read()
+for s in re.findall(rb'stream\r?\n(.*?)\r?\nendstream', content, re.DOTALL):
+    try:
+        d = zlib.decompress(s)
+        m = re.search(rb'/Type /Pages.*?/Count (\d+)', d, re.DOTALL)
+        if m:
+            print(m.group(1).decode()); sys.exit(0)
+    except Exception: pass
+print('?')
+" "$pdf" 2>/dev/null)
   echo "  $(basename "$pdf"): $pages page(s)"
-  if [[ "$pages" != "(null)" ]]; then
+  if [[ "$pages" != "?" ]]; then
     case "$pdf" in
       *Resume*)  [[ "$pages" -gt 2 ]] && echo "    WARNING: Resume exceeds 2 pages" ;;
       *Cover*)   [[ "$pages" -gt 1 ]] && echo "    WARNING: Cover letter spills to a second page" ;;
