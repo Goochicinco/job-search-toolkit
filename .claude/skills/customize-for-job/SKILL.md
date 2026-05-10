@@ -41,6 +41,8 @@ Before doing any work, check `Lead Tracker.md` for the company name:
 
 Before customizing any documents, research the target company to inform all subsequent phases.
 
+**Web request strategy:** Use WebFetch by default for all research requests. Fall back to Playwright (`browser_navigate` then `browser_snapshot`) only if WebFetch returns a login redirect, an empty body, or fewer than ~200 characters of useful content. Playwright runs headless -- no visible browser window.
+
 #### Step 1: Identify the company
 
 Extract the company name, website, and identifying details from the job posting. Handle three cases:

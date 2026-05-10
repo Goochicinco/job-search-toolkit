@@ -26,6 +26,17 @@ Key filters to apply when searching (drawn from Preferences.md):
 - Location and remote preferences
 - Compensation minimum and target
 
+## Web Request Strategy
+
+Always prefer WebFetch over Playwright -- it is faster, cheaper, and runs silently.
+
+- **Default:** Use WebFetch for all job board and career page requests.
+- **Known JS-required sites:** Use Playwright directly (skip the WebFetch attempt) for sites confirmed to need JavaScript:
+  - **linkedin.com** -- returns a login redirect without JavaScript
+  - **myworkdayjobs.com** -- Workday-hosted career portals render job content client-side
+- **Fallback trigger:** If WebFetch returns a login redirect, an empty body, or fewer than ~200 characters of useful content, retry with Playwright (`browser_navigate` then `browser_snapshot`).
+- **Playwright tooling:** `browser_navigate` to load the URL, `browser_snapshot` to extract structured page content. Fall back to `browser_take_screenshot` only if snapshot is insufficient.
+
 ## Process
 
 ### Step 1: Read existing data
