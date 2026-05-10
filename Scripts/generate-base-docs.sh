@@ -2,12 +2,12 @@
 # Regenerate the generic resume and cover letter PDFs in Documents/
 # from the source markdown files in Inputs/.
 #
-# Update APPLICANT_NAME to your full name before running.
+# APPLICANT_NAME is set automatically by /get-started Phase 5.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-APPLICANT_NAME="Your Name"  # <-- Update this to your name
+APPLICANT_NAME="Ryan Magaraci"
 
 mkdir -p Documents
 
@@ -33,14 +33,21 @@ echo ""
 echo "Page counts:"
 for pdf in "Documents/$APPLICANT_NAME - Resume.pdf" "Documents/$APPLICANT_NAME - Cover Letter.pdf"; do
   [[ -f "$pdf" ]] || continue
-  pages="(null)"
-  for _ in 1 2 3; do
-    pages=$(mdls -name kMDItemNumberOfPages -raw "$pdf")
-    [[ "$pages" != "(null)" ]] && break
-    sleep 1
-  done
+  pages=$(python -c "
+import zlib, re, sys
+with open(sys.argv[1], 'rb') as f:
+    content = f.read()
+for s in re.findall(rb'stream\r?\n(.*?)\r?\nendstream', content, re.DOTALL):
+    try:
+        d = zlib.decompress(s)
+        m = re.search(rb'/Type /Pages.*?/Count (\d+)', d, re.DOTALL)
+        if m:
+            print(m.group(1).decode()); sys.exit(0)
+    except Exception: pass
+print('?')
+" "$pdf" 2>/dev/null)
   echo "  $pdf: $pages page(s)"
-  if [[ "$pages" != "(null)" ]]; then
+  if [[ "$pages" != "?" ]]; then
     case "$pdf" in
       *Resume*)  [[ "$pages" -gt 2 ]] && echo "    WARNING: Resume exceeds 2 pages" ;;
       *Cover*)   [[ "$pages" -gt 1 ]] && echo "    WARNING: Cover letter spills to a second page" ;;

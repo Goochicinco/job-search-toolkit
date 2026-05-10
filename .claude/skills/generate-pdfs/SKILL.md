@@ -26,6 +26,6 @@ The script handles file discovery, PDF conversion, page count reporting, and war
 
 ## Important Rules
 
-- Always run the script from the repository root directory.
+- The script resolves its working directory automatically (`cd "$(dirname "$0")/.."`), so it can be invoked from anywhere.
 - The CSS files live in `.claude/skills/generate-pdfs/` and must not be modified.
 - Do not convert Interview Talking Points or any other files, only resumes and cover letters.

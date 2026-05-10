@@ -4,29 +4,39 @@ Your criteria for evaluating job opportunities. These preferences inform `/find-
 
 ## Target Roles
 
-- **Preferred titles:** [e.g., CTO, VP of Engineering, Head of Engineering]
-- **Acceptable scope:** [e.g., Senior-most engineering leader in the company, reporting to CEO]
-- **Not interested in:** [e.g., Director-level roles, roles reporting to a non-technical executive]
+- **Preferred titles:** [e.g., Director, Senior Director, Manager in Business Operations, Program Management, Customer Success, RevOps, Chief of Staff]
+- **Acceptable scope:** [e.g., Reporting to VP or Director level; team size and span as relevant]
+- **Not interested in:** [e.g., Front-line management; IC roles unless comp is above a specific floor]
 
 ## Company Criteria
 
-- **Stage:** [e.g., Series A through Series C]
-- **Industry:** [e.g., SaaS]
-- **Team size:** [e.g., 10-30 engineers]
-- **Growth:** [e.g., Must be a growth company; stagnant companies are a dealbreaker]
+- **Stage:** [e.g., Series A through Series C, or public, or bootstrapped with revenue]
+- **Industry:** [e.g., Healthcare, SaaS, fintech]
+- **Team size:** [e.g., Open to any; or "I do my best work in 50-500 person companies"]
+- **Growth:** [e.g., Must be growing; pre-revenue or layoff-pattern companies are dealbreakers]
 - **Culture:** [Describe the culture you want]
+
+## Named Target Employers
+
+[Optional: specific organizations to check on every search run regardless of stage criteria. List each with a short note about why.]
+
+## Dealbreakers
+
+- [e.g., Pre-revenue startups]
+- [e.g., Companies with layoff patterns in the last 12 months]
+- [e.g., Contract or 1099 only]
 
 ## Compensation
 
-- **Target:** [e.g., $300k total compensation]
-- **Minimum:** [e.g., $250k base or total]
+- **Target:** [e.g., $175K-$200K total compensation]
+- **Minimum:** [e.g., $150K base salary]
 - **Equity:** [Your stance on equity]
 
 ## Location
 
 - **Based in:** [Your city/metro]
 - **Preferred:** [e.g., Remote-friendly with some travel, or local opportunities]
-- **Will not accept:** [e.g., Full-time on-site or relocation]
+- **Will not accept:** [e.g., Relocation; full-time on-site]
 
 ## Industries to Avoid
 
@@ -57,16 +67,18 @@ Your criteria for evaluating job opportunities. These preferences inform `/find-
 
 ## Methodology Preferences
 
-- [Your preferred engineering practices and why]
+- [Your preferred operating practices, frameworks, or methodologies -- e.g., pragmatic Agile, OKRs, change management approach. Note any certifications you do or do not hold.]
 
 ## Candidate Voice
 
 - **Tone:** [e.g., Direct and confident, warm but professional, conversational]
-- **Style:** [e.g., Lead with data, use concrete examples, avoid vague superlatives]
-- **Avoid:** [e.g., Clichés like "passionate about" or "results-driven"; filler phrases; passive voice]
+- **Style:** [e.g., Lead with concrete results, use specific examples, avoid vague superlatives]
+- **Avoid:** [e.g., Clichés like "passionate about" or "results-driven"; corporate buzzwords; passive voice]
 - **Sentence structure:** [e.g., Prefer short declarative sentences; avoid run-ons]
 - **Other notes:** [Any other voice or style guidance for generated documents]
 
 ## Document Formatting
 
-- [Any formatting preferences for generated documents]
+- **Resume:** [e.g., Bullet-heavy for easy scanning]
+- **Cover letter:** [e.g., Narrative style that tells your story]
+- **Both:** [e.g., Concise, no fluff]

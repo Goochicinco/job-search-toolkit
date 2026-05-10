@@ -12,9 +12,28 @@ Your base documents (resume, cover letter, preferences) live in `Inputs/` and ar
 
 - [Claude Code](https://claude.ai/claude-code)
 - [pandoc](https://pandoc.org/) with [weasyprint](https://weasyprint.org/) (for PDF generation)
+- Python 3 (used for cross-platform PDF page counting in the build scripts)
+
+**macOS:**
 
 ```bash
 brew install pandoc
+pip install weasyprint
+```
+
+**Windows (PowerShell):**
+
+```powershell
+winget install --id JohnMacFarlane.Pandoc
+pip install weasyprint
+```
+
+WeasyPrint on Windows also needs the GTK3 runtime. See the [WeasyPrint Windows install guide](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows) for current instructions.
+
+**Linux (Debian/Ubuntu):**
+
+```bash
+sudo apt install pandoc python3-pip
 pip install weasyprint
 ```
 
@@ -56,12 +75,14 @@ Interactive onboarding for new users. Collects your contact info, job search pre
 
 ### `/find-jobs [keyword-or-pipeline]`
 
-Searches for engineering leadership roles (CTO, VP of Engineering, Head of Engineering) across multiple sources:
+Searches for leadership and senior IC roles matching your `Preferences.md` (defaults are tuned for operations and program management leadership, but the queries are driven by your preferences file). Sources include:
 
-- LinkedIn Jobs, Wellfound, Y Combinator Work at a Startup, Built In, The Ladders, EngMgrJobs, Welcome to the Jungle
+- LinkedIn Jobs, Wellfound, Y Combinator Work at a Startup, Built In, The Ladders, ExecThread, Welcome to the Jungle
+- Industry boards: Health eCareers, Rock Health Jobs, Glassdoor
+- ATS aggregators: Ashby HQ, Workday (`myworkdayjobs.com`)
 - Hacker News "Who is Hiring?" thread
 - VC portfolio job boards (national and regional)
-- Company Pipeline active targets
+- Company Pipeline active targets and Named Target Employers
 
 Ranks results against your profile in `Preferences.md`, deduplicates against `Lead Tracker.md`, and offers to add leads or start `/customize-for-job`.
 
@@ -88,7 +109,7 @@ Reorganizes the Experience Bank from job-specific Q&A entries into a topic-based
 
 ### `/archive-job FolderName`
 
-Moves a job application folder from `Applications/` to `Archived/` and updates the Lead Tracker.
+Moves a job application folder from `Applications/` to `Archived/`. Update the Lead Tracker entry manually (move it to Closed Leads with a reason) before or after archiving.
 
 ### `/generate-pdfs CompanyName`
 
@@ -131,5 +152,6 @@ Both scripts use pandoc with weasyprint and shared CSS from `.claude/skills/gene
 
 - [Claude Code](https://claude.ai/claude-code)
 - [pandoc](https://pandoc.org/) with [weasyprint](https://weasyprint.org/)
+- Python 3 (for PDF page count reporting)
 
-PDF generation uses `mdls` for page count reporting, which requires macOS. The markdown-to-PDF conversion works on any platform.
+Runs on macOS, Windows, and Linux. See the Setup section above for platform-specific install instructions.

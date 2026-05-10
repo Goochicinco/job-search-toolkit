@@ -76,7 +76,7 @@ Extract: total funding, last round details (amount, date, investors), estimated 
 
 #### Step 4: Research leadership team
 
-Use `WebSearch` to find information about key executives (CEO, CTO, VP Engineering, and the hiring manager if identifiable):
+Use `WebSearch` to find information about key executives (CEO, the function head most relevant to this role -- e.g., COO / CRO / CTO / Chief of Staff -- and the hiring manager if identifiable):
 
 1. Search `[CompanyName] [Title]` for each key role
 2. Search `[ExecutiveName] LinkedIn` to find public profile URLs
@@ -107,10 +107,10 @@ Create `Applications/CompanyName/Company Profile - CompanyName.md` with this str
 ## What They Do
 [2-3 sentence description of the company's product/service. What problem do they solve? Who are their customers?]
 
-## Product and Technology
+## Product and Operations
 - **Core Product:** [Product name and what it does]
-- **Tech Stack:** [Technologies mentioned in JD, website, or job postings]
-- **Technical Challenges:** [Inferred from JD and product - what are the hard engineering problems?]
+- **Tools & Stack:** [Technologies, platforms, or systems mentioned in JD, website, or job postings -- relevant for the role being applied to]
+- **Key Challenges:** [Inferred from JD and product - what are the hard problems this role would tackle? Engineering, operational, go-to-market, customer-facing, etc.]
 
 ## Funding and Financials
 - **Total Funding:** [Amount if known]
@@ -124,7 +124,7 @@ Create `Applications/CompanyName/Company Profile - CompanyName.md` with this str
 ### [Name] - [Title]
 - **Background:** [Previous companies, relevant experience]
 - **LinkedIn:** [Public profile URL]
-- **Notable:** [Conference talks, blog posts, public statements about engineering culture]
+- **Notable:** [Conference talks, blog posts, podcast appearances, public statements about how they run their function or build culture]
 
 [Repeat for each key leader found]
 
@@ -156,13 +156,13 @@ Mark any section where data was not found as "No data found" rather than omittin
    - Role title and reporting structure
    - Key responsibilities
    - Required and preferred qualifications
-   - Tech stack mentioned
+   - Tools, platforms, or methodologies named
    - Any cultural signals or values
 
-2. **Build an ATS keyword inventory** from the job description. Extract three categories, capturing each term in the JD's exact form (e.g., "CI/CD" not "continuous integration"):
-   - **Hard skills and technologies:** Every specific tool, framework, language, platform, and methodology named in the JD, including items from both the requirements and tech stack sections.
-   - **Role-specific terms:** Domain terms, industry jargon, and role descriptors (e.g., "microservices," "B2B SaaS," "Agile," "distributed systems").
-   - **Soft skills and leadership terms:** Phrases like "mentoring," "cross-functional collaboration," "ownership mindset," "hiring."
+2. **Build an ATS keyword inventory** from the job description. Extract three categories, capturing each term in the JD's exact form (e.g., "RevOps" not "revenue operations"; "CI/CD" not "continuous integration"):
+   - **Hard skills, tools, and platforms:** Every specific tool, framework, language, system, platform, and methodology named in the JD (e.g., Jira, Salesforce, Looker, NetSuite; or AWS services, frameworks, languages for engineering roles).
+   - **Role-specific terms:** Domain terms, industry jargon, and role descriptors (e.g., "PBM," "Stars ratings," "B2B SaaS," "Agile," "OKRs," "microservices").
+   - **Soft skills and leadership terms:** Phrases like "mentoring," "cross-functional collaboration," "stakeholder management," "ownership mindset," "hiring."
 
    For each keyword, note whether it appears in a "required" or "preferred" context. This inventory is a working list used in Phases 4, 4.5, and 6.
 
@@ -201,9 +201,9 @@ Create all files in `Applications/CompanyName/`. Name resume and cover letter fi
 
 **ATS keyword optimization:**
 - Each **required** keyword from the Phase 2 keyword inventory must appear at least once in the resume, in a contextual sentence (not a keyword dump). If a keyword corresponds to experience the candidate has but the base resume uses different terminology, use the JD's exact term (or both). For example, if the JD says "CI/CD" and the base resume says "continuous integration," use "CI/CD."
-- In the Technical Approach section, mirror the JD's technology terms exactly. If the JD lists specific services (e.g., "ECS, EKS, Lambda, RDS") and the candidate has used them, include those specifics rather than just the platform name.
-- For technologies in the JD that the candidate has used but the base resume does not mention, add them to the Technical Approach section or weave them into relevant experience bullets. Only add technologies the candidate has genuinely used.
-- For technologies the candidate has not used, do not add them. They should already be flagged in the gap analysis.
+- In the Core Competencies section (or whatever the equivalent named section is in the base resume -- e.g., "Technical Approach," "Areas of Expertise," "Skills"), mirror the JD's tool and methodology terms exactly. If the JD names specific products or services (e.g., "Salesforce, Gainsight, Looker" or "ECS, EKS, Lambda, RDS") and the candidate has used them, include those specifics rather than just the platform name.
+- For tools or methodologies in the JD that the candidate has used but the base resume does not mention, add them to the Core Competencies section or weave them into relevant experience bullets. Only add items the candidate has genuinely used.
+- For tools or methodologies the candidate has not used, do not add them. They should already be flagged in the gap analysis.
 - Never create a standalone "Keywords" or "Skills" section that is just a keyword list. ATS AI screeners give much more weight to keywords that appear in experience descriptions with context than to keyword lists.
 - Cap any single keyword at 3 occurrences in the resume to avoid triggering stuffing detection.
 

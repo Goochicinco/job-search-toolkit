@@ -73,18 +73,18 @@ Do not ask one question at a time. Ask the full batch in a single message.
 
 > "What kind of roles are you targeting?
 >
-> 1. What titles are you looking for? (e.g., CTO, VP of Engineering, Head of Engineering)
-> 2. What scope or reporting structure do you want? (e.g., senior-most engineering leader, reporting to the CEO)
-> 3. What are you NOT interested in? (e.g., Director-level, IC roles, roles reporting to a non-technical executive)"
+> 1. What titles are you looking for? (e.g., Director / Senior Director / Manager in Business Operations, Program Management, Customer Success, RevOps, Chief of Staff -- or any other function and level you're after)
+> 2. What scope or reporting structure do you want? (e.g., reporting to VP or Director level; size of team you'd own; cross-functional remit)
+> 3. What are you NOT interested in? (e.g., front-line management, IC roles below a certain comp, roles in a specific function)"
 
 ### Batch B: Company Criteria
 
 > "What kind of companies do you want to work for?
 >
-> 1. What funding stage? (e.g., Series A through C, bootstrapped, pre-IPO)
-> 2. What industry or product type? (e.g., B2B SaaS, developer tools, fintech)
-> 3. Preferred engineering team size (e.g., 10-30 engineers)
-> 4. Growth expectations (e.g., must be actively growing, stagnant is a dealbreaker)
+> 1. What funding stage? (e.g., Series A through C, public, bootstrapped with revenue)
+> 2. What industry or product type? (e.g., healthcare, B2B SaaS, fintech)
+> 3. Preferred company or team size (e.g., open to any, or '100-500 person companies')
+> 4. Growth expectations (e.g., must be actively growing; layoff patterns are a dealbreaker)
 > 5. Culture -- what kind of culture are you looking for?"
 
 ### Batch C: Compensation
@@ -118,7 +118,7 @@ Do not ask one question at a time. Ask the full batch in a single message.
 
 > "Three optional topics -- skip any you don't have strong preferences on.
 >
-> 1. Do you have preferred engineering methodologies or practices? (e.g., strong preference for continuous delivery, or particular views on Agile)
+> 1. Do you have preferred operating methodologies or frameworks? (e.g., pragmatic Agile, OKRs, change management approach; whether you hold or avoid formal certifications like PMP)
 > 2. How would you describe your writing voice and tone? (e.g., direct and confident, warm but professional, conversational) Are there phrases, words, or patterns you want to avoid in generated documents? (e.g., clichés like 'passionate about' or 'results-driven', passive voice, filler phrases)
 > 3. Any document formatting preferences for your generated resumes and cover letters? (e.g., prefer bullet-heavy, prefer concise)"
 
@@ -158,13 +158,14 @@ Extract the content and reformat it into the structure from `Inputs/Resume.templ
 - GitHub URL on the line after that (if provided in Phase 1)
 - SUMMARY section
 - EXPERIENCE section: each role formatted as `**Title | Company (industry descriptor) | Start Month Year - End Month Year**`, followed by a one-sentence impact framing, then bulleted achievements
-- TECHNICAL APPROACH section
+- CORE COMPETENCIES section
+- CERTIFICATIONS & LICENSES section (only if they have content -- omit if not present)
 - COMMUNITY & SPEAKING section (only if they have content -- omit if not present)
 - EDUCATION section
 
-If the pasted resume uses different section names, map them to the toolkit structure. If a section exists in the pasted content but has no equivalent in the template, include it at the bottom under a sensible heading -- do not discard content.
+If the pasted resume uses different section names (e.g., "Technical Approach," "Areas of Expertise," "Skills"), map them to CORE COMPETENCIES in the toolkit structure. If a section exists in the pasted content but has no equivalent in the template, include it at the bottom under a sensible heading -- do not discard content.
 
-If the pasted resume is sparse or missing key sections, note what's thin: "Your resume doesn't have a Technical Approach section yet. You can add one now or leave it as a placeholder." Do not invent content to fill gaps.
+If the pasted resume is sparse or missing key sections, note what's thin: "Your resume doesn't have a Core Competencies section yet. You can add one now or leave it as a placeholder." Do not invent content to fill gaps.
 
 Show the full draft and ask:
 
@@ -191,11 +192,13 @@ Walk through the resume section by section, starting with the most recent role.
 
 **Step 4:** SUMMARY: "Now let's write your professional summary. This is a 2-4 sentence statement at the top of your resume. It should answer: What problem do you solve? What results do you deliver? What makes you distinctive? Based on what you've told me, here's a draft -- correct it as needed:" Draft the summary from collected info, then wait for their edits.
 
-**Step 5:** TECHNICAL APPROACH: "The Technical Approach section is a set of labeled categories describing your approach and tooling. Examples: Engineering practices, Architecture, Platforms, AI enablement, Data. What would you include here?" Collect their input and format it.
+**Step 5:** CORE COMPETENCIES: "The Core Competencies section is a set of labeled categories describing your functional strengths, methodologies, and tooling. Common categories for operations and program management leaders: Program & Project Management, Business Operations, Domain Expertise (e.g., healthcare, fintech), Implementation / Customer Success, Change Management, Tools & Systems (e.g., Jira, Salesforce, NetSuite). For engineering leaders the categories tend to look like: Engineering Practices, Architecture, Platforms, AI Enablement, Data. Use whichever categories fit you -- what would you include?" Collect their input and format it.
 
-**Step 6:** COMMUNITY & SPEAKING (optional): "Do you have any speaking engagements, podcast appearances, open source contributions, or community involvement to include? Skip if not applicable."
+**Step 6:** CERTIFICATIONS & LICENSES (optional): "Do you hold any industry certifications, professional licenses, or PMP/PMI-style credentials? Skip if not applicable."
 
-**Step 7:** EDUCATION: "Finally, your education: degree, institution, and graduation year."
+**Step 7:** COMMUNITY & SPEAKING (optional): "Do you have any speaking engagements, podcast appearances, open source contributions, or community involvement to include? Skip if not applicable."
+
+**Step 8:** EDUCATION: "Finally, your education: degree, institution, and graduation year."
 
 After collecting all sections, show the complete draft and ask for explicit approval before writing.
 
@@ -227,7 +230,7 @@ Show the draft and ask:
 
 Draft a base cover letter using the information from Resume.md and Preferences.md. The base letter should:
 
-- Open with a strong statement of who they are as a candidate and what they bring to engineering leadership roles
+- Open with a strong statement of who they are as a candidate and what they bring to the kinds of roles in their Preferences
 - Highlight their core value proposition from the SUMMARY
 - Speak to the type of company and stage they want (from Preferences.md)
 - Use a closing paragraph that expresses enthusiasm for impact-oriented work
