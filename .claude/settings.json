@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:job-boards.greenhouse.io)",
+      "WebFetch(domain:boards.greenhouse.io)",
+      "WebFetch(domain:jobs.lever.co)",
+      "WebFetch(domain:jobs.ashbyhq.com)",
+      "WebFetch(domain:ats.rippling.com)",
+      "WebFetch(domain:builtin.com)",
+      "WebFetch(domain:www.theladders.com)",
+      "WebFetch(domain:wellfound.com)",
+      "WebFetch(domain:www.healthecareers.com)",
+      "WebFetch(domain:execthread.com)",
+      "WebFetch(domain:himalayas.app)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:news.ycombinator.com)",
+      "WebFetch(domain:jobs.a16z.com)",
+      "WebFetch(domain:jobs.bvp.com)",
+      "WebFetch(domain:jobs.greylock.com)",
+      "WebFetch(domain:jobs.accel.com)",
+      "WebFetch(domain:jobs.sapphireventures.com)",
+      "WebFetch(domain:jobs.insightpartners.com)",
+      "WebFetch(domain:jobs.pelionvp.com)",
+      "WebFetch(domain:jobs.kickstart.com)",
+      "WebFetch(domain:jobs.petersonventures.com)",
+      "WebFetch(domain:careers.adobe.com)",
+      "WebFetch(domain:employment.utah.edu)",
+      "WebFetch(domain:imh.wd108.myworkdayjobs.com)"
+    ]
+  }
+}

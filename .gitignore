@@ -1,5 +1,6 @@
 .DS_Store
 **/*.pdf
+.claude/settings.local.json
 Applications/
 Archived/
 Downloaded JDs/
